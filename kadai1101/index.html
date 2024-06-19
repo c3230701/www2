@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丸い矢印の見出し</title>
+    <style>
+        h1.q1{
+            position: relative;
+            padding-left: 30px;
+        }
+        h1.q1::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px; /* 幅を大きくする */
+            height: 24px; /* 高さを大きくする */
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            background: #75dca3;
+        }
+
+        h1.q1::after {
+            content: '';
+            position: absolute;
+            left: 6px; /* 左位置を調整 */
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg); /* 回転を追加 */
+            width: 8px; /* 幅を大きくする */
+            height: 8px; /* 高さを大きくする */
+            border-top: 2px solid #fff; /* 上ボーダーの線 */
+            border-right: 2px solid #fff; /* 右ボーダーの線 */
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color:#fff;
+            color:#666
+        }
+        
+        h1{
+            color:#333;
+            font-size: 1.5rem;
+            line-height:1.25;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="q1">丸い矢印付きの見出し</h1>
+</body>
+</html>
