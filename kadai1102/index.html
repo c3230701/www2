@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吹き出しのような見出し</title>
+    <style>
+        h1.q2 {
+            position: relative;
+            display: inline-block;
+            height: 2.75rem;
+            line-height: 2.75rem;
+            background-color: #5bdb9e;
+            color: #fff;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        h1.q2::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 30px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top: 10px solid #5bdb9e;
+        }
+
+        
+        body {
+            background-color:#fff;
+            color:#666;
+        }
+        
+        h1 {
+            color: #333;
+            font-size:1.5rem;
+            line-height:1.25;
+        }
+
+        h1.q2 {
+            height:2.75rem;
+            line-height:2.75rem;
+            background-color:#5bdb9e;
+            color: #fff;
+            padding-left:1rem;
+            padding-right:1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class>吹き出しのような見出し</h1>
+</body>
+</html>
