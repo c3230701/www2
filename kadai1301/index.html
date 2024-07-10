@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style1.css" rel="stylesheet">
+    <title>Responsive Design with Button Actions</title>
+    <style>
+        body {
+            background-color: #edfbfb;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .section {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        .section1 { background-color: #deffff; }
+        .section2 { background-color: #fff5e4; }
+        .section3 { background-color: #f8c3ff; }
+        .section4 { background-color: #ffefd5; }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        function showAlert(section) {
+            alert(section + ' button clicked!');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Responsive Design with Button Actions</h1>
+    </header>
+    <div class="container">
+        <div class="section section1">
+            <h2>Section 1</h2>
+            <p>This is the first section.It has a light blue  background,oadding,margin,and a boxshadow. The Iayout adjusts responsively to different screen sizes.</p>
+            <div class="image-container">
+                <img src="images/section1.jpg" alt="Section 1">
+            </div>
+            <button class="button" onclick="showAlert('Box 1')">Click Me</button>
+        </div>
+        <div class="section section2">
+            <h2>Box 2</h2>
+            <p>This is the second box. It has a light orange background, slightly rounded corners, a solid border, and a shadow. Including an image in this box helps break up the text and provides a visual example of the content. The use of CSS box shadow enhances the 3D effect of this box.</p>
+            <div class="image-container">
+                <img src="images/section2.jpg" alt="Section 2">
+            </div>
+            <button class="button" onclick="showAlert('Box 2')">Click Me</button>
+        </div>
+        <div class="section section3">
+            <h2>Box 3</h2>
+            <p>This is the third box. It has a light purple background, no rounded corners, and a dashed border. This box also includes an image, which helps to demonstrate how different styles and borders can be applied to create distinct visual sections within a webpage.</p>
+            <div class="image-container">
+                <img src="images/section3.jpg" alt="Section 3">
+            </div>
+            <button class="button" onclick="showAlert('Box 3')">Click Me</button>
+        </div>
+        <div class="section section4">
+            <h2>Box 4</h2>
+            <p>This is the fourth box. It has a light yellow background, no rounded corners, and a dashed border. This box also includes an image, which helps to demonstrate how different styles and borders can be applied to create distinct visual sections within a webpage.</p>
+            <div class="image-container">
+                <img src="images/section4.jpg" alt="Section 4">
+            </div>
+            <button class="button" onclick="showAlert('Box 4')">Click Me</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Responsive Design Practice</p>
+    </footer>
+</body>
+</html>
