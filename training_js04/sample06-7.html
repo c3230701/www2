@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列の利用</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>No.</td><td>料金(a)</td><td>人数(b)</td><td>a×b</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>500</td>
+            <td>10</td>
+            <td><button onclick="multiply_0()">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>980</td>
+            <td>16</td>
+            <td><button onclick="multiply_1()">利用料の合計</button></td>
+        </tr>
+        <tr>
+            <td>2</td><td>1200</td>
+            <td>8</td>
+            <td><button onclick="multiply_2()">利用料の合計</button></td>
+        </tr>
+    </table>
+    <script>
+        function multiply_0() {
+            let anser = 500*10;
+            alert('料金は' + anser + '円です');
+        }
+        function multiply_1() {
+            let anser = 980*16;
+            alert('料金は' + anser + '円です');
+        }
+        function multiply_2() {
+            let anser = 1200*8;
+            alert('料金は' + anser + '円です');
+        }
+    </script>
+</body>
+</html>
