@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素の取得と内容の変更</title>
+</head>
+<body>
+    <h1>座席の予約</h1>
+    <p>東京会場  <strong><font color="red"><span id="uketuke">(予約受付中)</span></font></p></strong></p>
+    <strong><div id="message"><button onclick="showAnswer()">予約する</button></div></strong>
+    <script>
+        function showAnswer(){
+            let answerBox = document.getElementById('message')
+            answerBox.innerHTML = 'ありがとうございました。';
+
+            answerBox = document.getElementById('uketuke')
+            answerBox.innerHTML ='(予約済み)';
+        }
+
+    </script>
+</body>
+</html>
