@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>繰り返し処理</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>写真の一覧</h1>
+    <ol id="schedule">
+        <li>中国</li>
+        <li>インド</li>
+        <li>アメリカ</li>
+        <li>インドネシア</li>
+    </ol>
+
+    <button onclick="showFlag()">国旗で表示</button>
+
+    <script>
+        let Flag = [
+            '<img src="flag_CHN.png">',
+            '<img src="flag_IND.png">',
+            '<img src="flag_USA.png">',
+            '<img src="flag_IDN.png">'
+        ];
+
+        let list = document.querySelectorAll('#schedule li');
+        
+        function showFlag() {
+            list[0].innerHTML = Flag[0];
+            list[1].innerHTML = Flag[1];
+            list[2].innerHTML = Flag[2];
+            list[3].innerHTML = Flag[3];
+        }
+    </script>
+</body>
+</html>

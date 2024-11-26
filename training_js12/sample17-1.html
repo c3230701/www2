@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>関数の戻り値</title>
+</head>
+
+<body>
+    <h1>入場料</h1>
+    <p id="info">一般の方の入場料は1500円です。</p>
+    <button id="btn" onclick="changePrice()">会員料金に変更</p>
+
+    <script>
+        function changePrice() {
+            let memberPrice = discount(1500);
+            document.getElementById('info').textContent
+                = '会員の方の入場料は' + memberPrice + '円です。';
+            document.getElementById('btn').remove();
+        }
+
+        //------20%OFFを計算する関数------------
+        function discount(price) {
+            price = price * 0.8;
+            return price;
+        }
+        //-------------------------------------
+    </script>
+</body>
+</html>
